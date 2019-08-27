@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5678140d63a925498686a729fb40900, type: 3}
-  m_Name: ScreenProportionConfig
+  m_Script: {fileID: 11500000, guid: ed1ba8184a168e64da4d759e511df691, type: 3}
+  m_Name: RockSpawnConfig
   m_EditorClassIdentifier: 
-  TopLeftCorner: {x: 0.1, y: 0.9}
-  BottomRightCorner: {x: 0.9, y: 0.1}
+  NumRocks: 3
+  RockHeight: 1.3
+  SpaceBetweenRocks: 3.5

@@ -120,6 +120,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &108873703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 108873705}
+  - component: {fileID: 108873704}
+  m_Layer: 0
+  m_Name: UFOSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &108873704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108873703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774e6608ee4f2aa4cba39442725d920e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ufoPrefab: {fileID: 5294788195917451944, guid: 7f0b4c891dc9dbe45a21489eee3f7911,
+    type: 3}
+--- !u!4 &108873705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108873703}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 541077387}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &139600830 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 739433668999933892, guid: af4ec720977b3104e92845b986808979,
@@ -230,6 +275,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!4 &319814045 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 739433668999933895, guid: af4ec720977b3104e92845b986808979,
+    type: 3}
+  m_PrefabInstance: {fileID: 739433669137419386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &421355411
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,12 +305,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421355411}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 541077387}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &421355413
 MonoBehaviour:
@@ -385,9 +436,14 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 421355412}
+  - {fileID: 682293468}
+  - {fileID: 319814045}
+  - {fileID: 1297423029}
+  - {fileID: 108873705}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &541077388
 MonoBehaviour:
@@ -404,6 +460,7 @@ MonoBehaviour:
   GameConfig: {fileID: 11400000, guid: f310fc2214cc86c4d9cd161473324dde, type: 2}
   Enemies: {fileID: 421355413}
   Rocks: {fileID: 682293469}
+  UFOSpawner: {fileID: 108873704}
   Player: {fileID: 139600830}
   GameCamera: {fileID: 519420031}
 --- !u!1 &682293467
@@ -430,12 +487,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682293467}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 541077387}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &682293469
 MonoBehaviour:
@@ -449,6 +506,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f211db2fdc2f8418467d1a01e8b28c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rockPrefab: {fileID: 8408945694117777949, guid: e36337938e151f842824299ea577553f,
+    type: 3}
 --- !u!1 &1276609500
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,19 +646,19 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297423026}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 541077387}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &739433669137419386
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 541077387}
     m_Modifications:
     - target: {fileID: 739433668999933894, guid: af4ec720977b3104e92845b986808979,
         type: 3}
@@ -614,7 +673,7 @@ PrefabInstance:
     - target: {fileID: 739433668999933895, guid: af4ec720977b3104e92845b986808979,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4.4
       objectReference: {fileID: 0}
     - target: {fileID: 739433668999933895, guid: af4ec720977b3104e92845b986808979,
         type: 3}
@@ -624,17 +683,17 @@ PrefabInstance:
     - target: {fileID: 739433668999933895, guid: af4ec720977b3104e92845b986808979,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 739433668999933895, guid: af4ec720977b3104e92845b986808979,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 739433668999933895, guid: af4ec720977b3104e92845b986808979,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 739433668999933895, guid: af4ec720977b3104e92845b986808979,
         type: 3}
@@ -644,7 +703,7 @@ PrefabInstance:
     - target: {fileID: 739433668999933895, guid: af4ec720977b3104e92845b986808979,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 739433668999933895, guid: af4ec720977b3104e92845b986808979,
         type: 3}

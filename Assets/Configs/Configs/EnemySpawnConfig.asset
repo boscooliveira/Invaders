@@ -15,4 +15,5 @@ MonoBehaviour:
   EnemiesPerLine: 6
   MaxLines: 6
   SpaceBetweenEnemies: 1.5
-  SpaceBetweenLines: 1.5
+  SpaceBetweenLines: 0.8
+  FirstLinePadding: 1

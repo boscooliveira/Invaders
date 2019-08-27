@@ -1,18 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Player : MonoBehaviour
+namespace Assets.Source.Models
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Player : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Reset(Vector3 bottomLeft, float gameWidth)
+        {
+            Vector3 playerPos = bottomLeft;
+            playerPos.x += gameWidth * 0.5f;
+            transform.position = playerPos;
+        }
     }
 }

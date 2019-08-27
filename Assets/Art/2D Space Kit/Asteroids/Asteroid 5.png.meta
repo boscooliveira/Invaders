@@ -3,7 +3,49 @@ guid: 06ebc3b6f7d199745ac6895e9d0f2e09
 labels:
 - Asteroid
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3355175044612264214
+    second: Asteroid 5_0
+  - first:
+      213: -695193587822475103
+    second: Asteroid 5_1
+  - first:
+      213: 5310493958875486548
+    second: Asteroid 5_2
+  - first:
+      213: 6689162878857980829
+    second: Asteroid 5_3
+  - first:
+      213: 2316205900899753013
+    second: Asteroid 5_4
+  - first:
+      213: 6822952547756420257
+    second: Asteroid 5_5
+  - first:
+      213: 6662162229333704071
+    second: Asteroid 5_6
+  - first:
+      213: -2935051357157937844
+    second: Asteroid 5_7
+  - first:
+      213: 4633124096807240953
+    second: Asteroid 5_8
+  - first:
+      213: 1873004805264984524
+    second: Asteroid 5_9
+  - first:
+      213: 8306448561605367368
+    second: Asteroid 5_10
+  - first:
+      213: -855987568026274254
+    second: Asteroid 5_11
+  - first:
+      213: -879846020131575689
+    second: Asteroid 5_13
+  - first:
+      213: 7487963286365878677
+    second: Asteroid 5_14
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -42,7 +84,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +113,336 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Asteroid 5_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 72
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a0dbc38e952df46b2a77ec4388a0e5
+      internalID: -3355175044612264214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asteroid 5_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 72
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84007e088c9e944d9454b8b9ee1580a
+      internalID: -695193587822475103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asteroid 5_2
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 72
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2989b183d4c7d214f8b380b9857170a8
+      internalID: 5310493958875486548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asteroid 5_3
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 72
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae924e97d577f7547a9e22b1d113a6f4
+      internalID: 6689162878857980829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asteroid 5_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460bf0d3fdc05164bbf263f93567d3dc
+      internalID: 2316205900899753013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asteroid 5_5
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 48
+        width: 26.5
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5cf3cd5ea7a0bd438e4419bb5f402ce
+      internalID: 6822952547756420257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asteroid 5_6
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 48
+        width: 26.5
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f90ef0eae2002974ead692349bfb3a2b
+      internalID: 6662162229333704071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asteroid 5_7
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 48
+        width: 26.5
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e63b0b3184e74448ab6e23f62c66e2
+      internalID: -2935051357157937844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asteroid 5_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 8
+        width: 23
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999cd3b09852e4846a01a4bcec56c246
+      internalID: 4633124096807240953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asteroid 5_9
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 24
+        width: 26.5
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4e9bd7f6c29744e9f4486ee9485811
+      internalID: 1873004805264984524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asteroid 5_10
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 24
+        width: 26.5
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f7a536dc95b7814e95b1a8f91247ff8
+      internalID: 8306448561605367368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asteroid 5_11
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cb04c445e9e6a418c247722300e291
+      internalID: -855987568026274254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asteroid 5_13
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 26.5
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a43d549445d4e143942416b9b98f3e9
+      internalID: -879846020131575689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asteroid 5_14
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 26.5
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc0201f71674b6468803faa1de3e295
+      internalID: 7487963286365878677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

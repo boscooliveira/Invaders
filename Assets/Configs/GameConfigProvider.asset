@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0725d54f58c6b468a8d3eb3f7845e8, type: 3}
   m_Name: GameConfigProvider
   m_EditorClassIdentifier: 
-  ScreenProportion: {fileID: 11400000, guid: cb850954214b59a4fab8788aa82a6f63, type: 2}
-  EnemySpawn: {fileID: 11400000, guid: 3572dd073e1e0c444a4fc53154816711, type: 2}
+  ScreenProportionConfig: {fileID: 11400000, guid: cb850954214b59a4fab8788aa82a6f63,
+    type: 2}
+  EnemySpawnConfig: {fileID: 11400000, guid: 3572dd073e1e0c444a4fc53154816711, type: 2}
+  EnemyBehaviourConfig: {fileID: 11400000, guid: da432beaa0430584582a0ad057cfbb49,
+    type: 2}
+  RockSpawnConfig: {fileID: 11400000, guid: 51c9321e4040b464d8a55f402ae769f9, type: 2}

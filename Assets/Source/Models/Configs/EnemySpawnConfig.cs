@@ -7,7 +7,8 @@ namespace Assets.Source.Models.Configs
     {
         public int EnemiesPerLine = 6;
         public int MaxLines = 6;
-        public float SpaceBetweenEnemies = 2;
-        public float SpaceBetweenLines = 2;
+        public float SpaceBetweenEnemies = 1.5f;
+        public float SpaceBetweenLines = 0.9f;
+        public float FirstLinePadding = 1;
     }
 }
