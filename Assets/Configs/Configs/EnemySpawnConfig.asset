@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemiesPerLine: 6
   MaxLines: 6
-  SpaceBetweenEnemies: 1.5
-  SpaceBetweenLines: 0.8
+  SpaceBetweenEnemies: 1.2
+  SpaceBetweenLines: 0.6
   FirstLinePadding: 1

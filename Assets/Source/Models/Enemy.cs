@@ -1,18 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Assets.Source.Models.Game.Actors;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+namespace Assets.Source.Models
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Enemy : MonoBehaviour, IEnemy
     {
-        
-    }
+        public Vector3 Position { get => transform.position; set => transform.position = value; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public bool IsDestroyed => false;
+
+        public event DestroyedDelegate ObjectDestroyed;
+        public event ShotDelegate Shot;
+
+        public void Destroy()
+        {
+            ObjectDestroyed?.Invoke(this);
+        }
+
+        public void Shoot()
+        {
+            Shot?.Invoke(this);
+        }
     }
 }

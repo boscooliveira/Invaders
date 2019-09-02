@@ -1,9 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Assets.Source.Models.Game.Actors;
 using UnityEngine;
 
-public class Rock : MonoBehaviour
+public class Rock : MonoBehaviour, IRock
 {
+    public bool IsDestroyed => false;
+
+    public event DestroyedDelegate ObjectDestroyed;
+
+    public void Destroy()
+    {
+        ObjectDestroyed?.Invoke(this);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

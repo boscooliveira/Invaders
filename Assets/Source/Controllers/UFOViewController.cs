@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace Assets.Source.Controllers
 {
-    public class UFOSpawner : MonoBehaviour
+    public class UFOViewController : MonoBehaviour
     {
         [SerializeField]
-        private UFO _ufoPrefab;
+        private UFO _ufoPrefab = default(UFO);
 
         private UFO _spawnedUFO;
 

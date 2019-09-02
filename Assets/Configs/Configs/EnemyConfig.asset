@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: EnemyConfig
   m_EditorClassIdentifier: Assembly-CSharp:Assets.Source.Models.Configs:EnemyBehaviourConfig
-  MaxTickTime: 0.5
-  MinTickTime: 0.1
+  MaxTickTime: 0.8
+  MinTickTime: 0.2
+  MoveSpeed: 0.15

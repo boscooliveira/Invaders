@@ -1,8 +1,12 @@
-﻿using Assets.Source.Controllers;
+﻿using Assets.Source.Models;
 using Assets.Source.Models.Configs;
+using Assets.Source.Models.Game;
+using Assets.Source.Models.Game.Controllers;
+using Assets.Source.Models.Game.Managers.Input;
+using Assets.Source.Models.Game.Managers.States;
 using UnityEngine;
 
-namespace Assets.Source.Models.Game
+namespace Assets.Source.Controllers
 {
     /// <summary>
     /// This class controls the game states
@@ -11,13 +15,15 @@ namespace Assets.Source.Models.Game
     {
         private const int _foregroundZ = -1;
         public GameConfigProvider GameConfig;
-        public EnemiesController Enemies;
-        public RockSpawner Rocks;
-        public UFOSpawner UFOSpawner;
+        public EnemiesViewController Enemies;
+        public RockViewController Rocks;
+        public UFOViewController UFOSpawner;
         public Player Player;
         public Camera GameCamera;
 
-        void Start()
+        private InvaderGame _game;
+
+        private void Start()
         {
             Vector2 topLeft = GameConfig.ScreenProportionConfig.TopLeftCorner;
             Vector2 bottomRight = GameConfig.ScreenProportionConfig.BottomRightCorner;
@@ -31,18 +37,20 @@ namespace Assets.Source.Models.Game
             topRightWorld.z = _foregroundZ;
             bottomLeftWorld.z = _foregroundZ;
             bottomRightWorld.z = _foregroundZ;
-
             float gameWidth = bottomRightWorld.x - topLeftWorld.x;
-            Enemies.SpawnEnemies(GameConfig.EnemySpawnConfig, topLeftWorld, gameWidth);
-            Rocks.SpawnRocks(GameConfig.RockSpawnConfig, bottomLeftWorld, gameWidth);
-            Player.Reset(bottomLeftWorld, gameWidth);
-            UFOSpawner.SpawnUFO(topRightWorld, gameWidth);
+
+            Enemies.SetConfigs(GameConfig.EnemySpawnConfig, topLeftWorld, gameWidth);
+            Player.SetConfigs(bottomLeftWorld, gameWidth);
+            Rocks.SetConfigs(GameConfig.RockSpawnConfig, bottomLeftWorld, gameWidth);
+
+            var controller = new EnemyController(GameConfig.EnemyBehaviourConfig, GameConfig.EnemySpawnConfig, 
+                topLeftWorld.x, bottomRightWorld.x);
+            _game = new InvaderGame(Enemies, Player, Rocks, new StateManager(), new GameInputManager(), controller);
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
-
+            _game.UpdateGame();
         }
     }
 }

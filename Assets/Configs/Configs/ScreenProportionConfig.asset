@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5678140d63a925498686a729fb40900, type: 3}
   m_Name: ScreenProportionConfig
   m_EditorClassIdentifier: 
-  TopLeftCorner: {x: 0.1, y: 0.95}
-  BottomRightCorner: {x: 0.9, y: 0.05}
+  TopLeftCorner: {x: 0.2, y: 0.95}
+  BottomRightCorner: {x: 0.8, y: 0.05}
