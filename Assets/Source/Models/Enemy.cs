@@ -9,6 +9,8 @@ namespace Assets.Source.Models
 
         public bool IsDestroyed => false;
 
+        public Vector2 GridPosition { get; set; }
+
         public event DestroyedDelegate ObjectDestroyed;
         public event ShotDelegate Shot;
 

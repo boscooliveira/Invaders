@@ -45,6 +45,7 @@ namespace Assets.Source.Controllers
                 {
                     enemyPosition.x = topLeft.x + j * _config.SpaceBetweenEnemies;
                     Enemy enemy = Instantiate(_enemyPrefab, enemyPosition, Quaternion.identity, transform);
+                    enemy.GridPosition = new Vector2(j, i);
                     _enemies.Add(enemy);
                 }
             }
