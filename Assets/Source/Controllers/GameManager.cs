@@ -40,13 +40,15 @@ namespace Assets.Source.Controllers
             bottomRightWorld.z = _foregroundZ;
             float gameWidth = bottomRightWorld.x - topLeftWorld.x;
 
+            BulletSpawner.SetConfig(GameConfig.BulletConfig);
+
             Enemies.SetConfigs(GameConfig.EnemySpawnConfig, topLeftWorld, gameWidth);
-            Player.SetConfigs(bottomLeftWorld, gameWidth);
+            Player.SetConfigs(bottomLeftWorld, BulletSpawner, gameWidth);
             Rocks.SetConfigs(GameConfig.RockSpawnConfig, bottomLeftWorld, gameWidth);
 
             var controller = new EnemyController(GameConfig.EnemyBehaviourConfig, GameConfig.EnemySpawnConfig, BulletSpawner,
                 topLeftWorld.x, bottomRightWorld.x);
-            BulletSpawner.SetConfig(GameConfig.BulletConfig);
+            
             _game = new InvaderGame(Enemies, Player, Rocks, BulletSpawner, new StateManager(), new GameInputManager(), 
                 controller, new BulletController());
         }

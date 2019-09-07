@@ -7,6 +7,6 @@ namespace Assets.Source.Models.Game.Actors
     {
         UnityEngine.Vector3 GunPosition { get; }
         event ShotDelegate Shot;
-        IBullet Shoot(IBulletSpawner _bulletSpawner);
+        IBullet Shoot(IBulletSpawner bulletSpawner);
     }
 }

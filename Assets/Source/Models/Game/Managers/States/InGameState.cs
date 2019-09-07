@@ -69,6 +69,8 @@ namespace Assets.Source.Models.Game.Managers.States
             _gameData.EnemyController.UpdateEnemiesPositions(_gameData.Enemies);
             var bullets = _gameData.EnemyController.GetEnemiesBullets();
             _gameData.BulletController.UpdateBulletPositions(bullets);
+            _gameData.Player.UpdatePosition(input);
+            _gameData.BulletController.UpdateBulletPositions(_gameData.Player.GetBullets());
         }
     }
 }
