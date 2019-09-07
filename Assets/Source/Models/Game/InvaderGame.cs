@@ -10,15 +10,18 @@ namespace Assets.Source.Models.Game
         private readonly IStateManager _stateManager;
         private readonly IGameInputManager _inputManager;
 
-        public InvaderGame(IEnemiesSpawner enemiesSpawner, IPlayerSpawner playerSpawner, IRockSpawner rockSpawner, 
-            IStateManager state, IGameInputManager input, IEnemyController enemyController)
+        public InvaderGame(IEnemiesSpawner enemiesSpawner, IPlayerSpawner playerSpawner, IRockSpawner rockSpawner,
+            IBulletSpawner bulletSpawner, IStateManager state, IGameInputManager input, IEnemyController enemyController, 
+            IBulletController bulletController)
         {
             _gameData = new GameData
             {
                 EnemiesSpawner = enemiesSpawner,
                 PlayerSpawner = playerSpawner,
                 RockSpawner = rockSpawner,
-                EnemyController = enemyController
+                BulletSpawner = bulletSpawner,
+                EnemyController = enemyController,
+                BulletController = bulletController
             };
 
             _stateManager = state;

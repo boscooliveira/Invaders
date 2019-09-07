@@ -18,3 +18,4 @@ MonoBehaviour:
   EnemyBehaviourConfig: {fileID: 11400000, guid: da432beaa0430584582a0ad057cfbb49,
     type: 2}
   RockSpawnConfig: {fileID: 11400000, guid: 51c9321e4040b464d8a55f402ae769f9, type: 2}
+  BulletConfig: {fileID: 11400000, guid: 2a03eb07bead40042ad95a037e334184, type: 2}

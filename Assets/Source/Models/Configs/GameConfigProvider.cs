@@ -7,7 +7,8 @@ namespace Assets.Source.Models.Configs
     {
         public ScreenProportionConfig ScreenProportionConfig;
         public EnemySpawnConfig EnemySpawnConfig;
-        public EnemyBehaviourConfig EnemyBehaviourConfig;
+        public EnemyConfig EnemyBehaviourConfig;
         public RockSpawnConfig RockSpawnConfig;
+        public BulletConfig BulletConfig;
     }
 }

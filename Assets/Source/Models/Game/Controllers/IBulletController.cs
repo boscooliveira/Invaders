@@ -3,10 +3,9 @@ using System.Collections.Generic;
 
 namespace Assets.Source.Models.Game.Controllers
 {
-    public interface IEnemyController
+    public interface IBulletController
     {
         void Reset();
-        void UpdateEnemiesPositions(IList<IEnemy> enemies);
-        List<IBullet> GetEnemiesBullets();
+        void UpdateBulletPositions(IList<IBullet> bullets);
     }
 }

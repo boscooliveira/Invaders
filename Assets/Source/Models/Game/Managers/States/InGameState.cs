@@ -67,6 +67,8 @@ namespace Assets.Source.Models.Game.Managers.States
             //TODO: Update Enemies/Player/Bullets
             //TODO: Check Pause
             _gameData.EnemyController.UpdateEnemiesPositions(_gameData.Enemies);
+            var bullets = _gameData.EnemyController.GetEnemiesBullets();
+            _gameData.BulletController.UpdateBulletPositions(bullets);
         }
     }
 }

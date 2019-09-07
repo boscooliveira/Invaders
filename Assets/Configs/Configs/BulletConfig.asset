@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbb79fd39dc92e40bc5f32a9a413a83, type: 3}
-  m_Name: EnemyConfig
-  m_EditorClassIdentifier: Assembly-CSharp:Assets.Source.Models.Configs:EnemyBehaviourConfig
-  ShootRate: 0.5
-  MaxTickTime: 0.5
-  MinTickTime: 0.1
-  MoveSpeed: 0.1
+  m_Script: {fileID: 11500000, guid: 8a7c2512fbe035142ad90150aa2217a0, type: 3}
+  m_Name: BulletConfig
+  m_EditorClassIdentifier: 
+  OffScreenKillZone: -1
+  MoveSpeed: 10

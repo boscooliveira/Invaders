@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
+using Assets.Source.Controllers;
+using Assets.Source.Models.Configs;
 using Assets.Source.Models.Game.Actors;
+using UnityEngine;
 
 namespace Assets.Source.Models.Game
 {
@@ -19,5 +22,10 @@ namespace Assets.Source.Models.Game
 
     public interface IRockSpawner : IListSpawner<IRock>
     {
+    }
+
+    public interface IBulletSpawner
+    {
+        IBullet SpawnBullet(IShooter shooter, EBulletDirection direction);
     }
 }

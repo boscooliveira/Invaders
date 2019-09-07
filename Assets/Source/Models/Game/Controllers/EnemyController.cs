@@ -1,6 +1,5 @@
 ﻿using Assets.Source.Models.Configs;
 using Assets.Source.Models.Game.Actors;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,23 +7,29 @@ namespace Assets.Source.Models.Game.Controllers
 {
     public class EnemyController : IEnemyController
     {
-        private readonly EnemyBehaviourConfig _enemyConfig;
+        private readonly EnemyConfig _enemyConfig;
         private readonly EnemySpawnConfig _enemySpawnConfig;
+        private readonly IBulletSpawner _bulletSpawner;
         private readonly float _minX;
         private readonly float _maxX;
         private float _timeToNextUpdate;
         private readonly List<IEnemy> _enemiesLeft;
+        private readonly Dictionary<int, IEnemy> _possibleShooters;
         private IEnemy _mostLeft;
         private IEnemy _mostRight;
         private bool _moveLeft;
         private bool _moveDown;
 
-        public EnemyController(EnemyBehaviourConfig enemyConfig, EnemySpawnConfig enemySpawnConfig, float minX, float maxX)
+        private List<IBullet> _firedBullets = new List<IBullet>();
+
+        public EnemyController(EnemyConfig enemyConfig, EnemySpawnConfig enemySpawnConfig, IBulletSpawner bulletSpawner, float minX, float maxX)
         {
             _moveLeft = true;
             _enemiesLeft = new List<IEnemy>(enemySpawnConfig.EnemiesPerLine * enemySpawnConfig.MaxLines);
+            _possibleShooters = new Dictionary<int, IEnemy>();
             _enemyConfig = enemyConfig;
             _enemySpawnConfig = enemySpawnConfig;
+            _bulletSpawner = bulletSpawner;
             _minX = minX;
             _maxX = maxX;
         }
@@ -40,12 +45,52 @@ namespace Assets.Source.Models.Game.Controllers
             UpdateEnemiesLeft(enemies);
             MoveEnemiesLines();
             ResetTimeToUpdate();
+
+            if (_enemiesLeft.Count != 0 && Random.value <= _enemyConfig.ShootRate)
+            {
+                ShootBullet();
+            }
+        }
+
+        private void ShootBullet()
+        {
+            _possibleShooters.Clear();
+            foreach (var enemy in _enemiesLeft)
+            {
+                int collum = (int) enemy.GridPosition.x;
+                if (_possibleShooters.TryGetValue(collum, out IEnemy shooter))
+                {
+                    if(shooter.GridPosition.y < enemy.GridPosition.y)
+                    {
+                        _possibleShooters[collum] = enemy;
+                    }
+                }
+                else
+                {
+                    _possibleShooters[collum] = enemy;
+                }
+            }
+            // assuming the _enenmiesLeft is never empty
+            var position = Mathf.Max(0, Mathf.Ceil (_possibleShooters.Count * Random.value) - 1);
+
+            foreach (var keyValuePair in _possibleShooters)
+            {
+                if (position != 0)
+                {
+                    position--;
+                    continue;
+                }
+
+
+                _firedBullets.Add( keyValuePair.Value.Shoot(_bulletSpawner) );
+                break;
+            }
         }
 
         private void ResetTimeToUpdate()
         {
             int maxEnemies = _enemySpawnConfig.EnemiesPerLine * _enemySpawnConfig.MaxLines;
-            float factor = Mathf.Exp((float)_enemiesLeft.Count/maxEnemies) / (float) Math.E;
+            float factor = Mathf.Exp((float)_enemiesLeft.Count/maxEnemies) / (float) System.Math.E;
 
             _timeToNextUpdate = _enemyConfig.MinTickTime + (_enemyConfig.MaxTickTime - _enemyConfig.MinTickTime) * factor;
         }
@@ -114,6 +159,11 @@ namespace Assets.Source.Models.Game.Controllers
         {
             _moveLeft = true;
             _timeToNextUpdate = 0;
+        }
+
+        public List<IBullet> GetEnemiesBullets()
+        {
+            return _firedBullets;
         }
     }
 }

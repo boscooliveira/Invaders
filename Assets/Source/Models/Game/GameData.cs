@@ -6,6 +6,7 @@ namespace Assets.Source.Models.Game
 {
     public class GameData
     {
+        public IBulletSpawner BulletSpawner;
         public IEnemiesSpawner EnemiesSpawner;
         public IPlayerSpawner PlayerSpawner;
         public IRockSpawner RockSpawner;
@@ -14,5 +15,6 @@ namespace Assets.Source.Models.Game
         public List<IDestructible> Destructibles;
         public IPlayer Player;
         public IEnemyController EnemyController;
+        public IBulletController BulletController;
     }
 }

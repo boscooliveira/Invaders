@@ -18,6 +18,7 @@ namespace Assets.Source.Controllers
         public EnemiesViewController Enemies;
         public RockViewController Rocks;
         public UFOViewController UFOSpawner;
+        public BulletSpawner BulletSpawner;
         public Player Player;
         public Camera GameCamera;
 
@@ -43,9 +44,11 @@ namespace Assets.Source.Controllers
             Player.SetConfigs(bottomLeftWorld, gameWidth);
             Rocks.SetConfigs(GameConfig.RockSpawnConfig, bottomLeftWorld, gameWidth);
 
-            var controller = new EnemyController(GameConfig.EnemyBehaviourConfig, GameConfig.EnemySpawnConfig, 
+            var controller = new EnemyController(GameConfig.EnemyBehaviourConfig, GameConfig.EnemySpawnConfig, BulletSpawner,
                 topLeftWorld.x, bottomRightWorld.x);
-            _game = new InvaderGame(Enemies, Player, Rocks, new StateManager(), new GameInputManager(), controller);
+            BulletSpawner.SetConfig(GameConfig.BulletConfig);
+            _game = new InvaderGame(Enemies, Player, Rocks, BulletSpawner, new StateManager(), new GameInputManager(), 
+                controller, new BulletController());
         }
 
         private void Update()

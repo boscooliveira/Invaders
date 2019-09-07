@@ -5,7 +5,8 @@ namespace Assets.Source.Models.Game.Actors
 
     public interface IShooter
     {
+        UnityEngine.Vector3 GunPosition { get; }
         event ShotDelegate Shot;
-        void Shoot();
+        IBullet Shoot(IBulletSpawner _bulletSpawner);
     }
 }

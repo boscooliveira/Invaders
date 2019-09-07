@@ -19,6 +19,7 @@ namespace Assets.Source.Controllers
 
         public void DestroyEnemy(Enemy enemy)
         {
+            //TODO: use pool of enemies
             Destroy(enemy);
             _enemies.Remove(enemy);
         }
