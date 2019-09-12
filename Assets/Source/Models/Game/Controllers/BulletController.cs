@@ -1,5 +1,4 @@
-﻿using Assets.Source.Models.Configs;
-using Assets.Source.Models.Game.Actors;
+﻿using Assets.Source.Models.Game.Actors;
 using System.Collections.Generic;
 
 namespace Assets.Source.Models.Game.Controllers
@@ -24,8 +23,9 @@ namespace Assets.Source.Models.Game.Controllers
 
         public void UpdateBulletPositions(IList<IBullet> bullets)
         {
-            foreach (var bullet in bullets)
+            for (int i = bullets.Count-1; i >= 0; i--)
             {
+                IBullet bullet = bullets[i];
                 bullet.UpdatePosition();
             }
         }

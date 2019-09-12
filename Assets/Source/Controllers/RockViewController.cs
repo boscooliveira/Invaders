@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Assets.Source.Models;
 using Assets.Source.Models.Configs;
 using Assets.Source.Models.Game;
 using Assets.Source.Models.Game.Actors;
@@ -9,7 +10,7 @@ namespace Assets.Source.Controllers
     public class RockViewController : MonoBehaviour, IRockSpawner
     {
         [SerializeField]
-        private Rock _rockPrefab = default(Rock);
+        private RockGroup _rockPrefab = default(RockGroup);
         private List<IRock> _rocks = new List<IRock>();
         private RockSpawnConfig _config;
         private Vector3 _gameBottomLeft;
@@ -37,8 +38,8 @@ namespace Assets.Source.Controllers
                 position = gameBottomLeft;
                 position.x += j * _config.SpaceBetweenRocks;
                 position.y = heightPosition;
-                Rock rock = Instantiate(_rockPrefab, position, Quaternion.identity, transform);
-                _rocks.Add(rock);
+                RockGroup rock = Instantiate(_rockPrefab, position, Quaternion.identity, transform);
+                _rocks.AddRange(rock.GetRockPieces());
             }
 
             return _rocks;
@@ -49,12 +50,6 @@ namespace Assets.Source.Controllers
             _config = config;
             _gameBottomLeft = gameBottomLeft;
             _gameWidth = gameWidth;
-        }
-
-        private void DestroyRock(Rock rock)
-        {
-            Destroy(rock);
-            _rocks.Remove(rock);
         }
     }
 }

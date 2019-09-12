@@ -5,66 +5,37 @@ using UnityEngine;
 
 namespace Assets.Source.Models
 {
-    public class Bullet : MonoBehaviour, IBullet
+    [RequireComponent(typeof(HitDetector))]
+    public class Bullet : DestructibleActor, IBullet
     {
         private EBulletDirection _bulletDirection;
-        private IShooter _shooter;
         private float _speed;
+        private float _killZone;
 
-        public bool IsDestroyed => throw new System.NotImplementedException();
-
-        public event HitDestructibleDelegate OnHitDestructible;
-        public event DestroyedDelegate ObjectDestroyed;
-
-        public void Destroy()
+        public void UpdatePosition()
         {
-            Destroy(this);
-        }
-
-        public void FireBullet(IShooter shooter, Vector3 position, Vector3 direction)
-        {
-        }
-
-        private void OnCollide(Collider c)
-        {
-            var shooter = c.GetComponent<IShooter>();
-            if (shooter == _shooter)
+            if (IsDestroyed)
             {
                 return;
             }
 
-            var destructible = c.GetComponent<IDestructible>();
-            if (destructible != null)
+            Vector3 direction = _bulletDirection == EBulletDirection.Up ? Vector3.up : Vector3.down;
+            transform.Translate( direction * _speed * Time.deltaTime );
+
+            var newPositionY = transform.position.y; 
+            if (newPositionY > _killZone || newPositionY < -_killZone)
             {
-                destructible.Destroy();
                 Destroy();
+                return;
             }
         }
 
-        public void Reset(Vector3 topLeft)
-        {
-            transform.position = topLeft;
-        }
-
-        public void UpdatePosition()
-        {
-            var newPosition = transform.position;
-            if(_bulletDirection == EBulletDirection.Up)
-            {
-                newPosition.y += (_speed * Time.deltaTime);
-            }
-            else
-            {
-                newPosition.y -= (_speed * Time.deltaTime);
-            }
-            transform.position = newPosition;
-        }
-
-        public void SetProperties(IShooter shooter, EBulletDirection direction, float speed = 1f, float offScreenKillZone = 0)
+        public void SetProperties(EBulletDirection direction, float speed = 1f, float killZone = 0)
         {
             _bulletDirection = direction;
-            _shooter = shooter;
             _speed = speed;
+            _killZone = killZone;
+            IsDestroyed = false;
         }
     }
 }

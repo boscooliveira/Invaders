@@ -42,6 +42,7 @@ namespace Assets.Source.Controllers
             for(int i = 0; i < _config.MaxLines; i++)
             {
                 enemyPosition.y = topLeft.y - (i * _config.SpaceBetweenLines + _config.FirstLinePadding);
+                enemyPosition.z = -1;
                 for (int j = 0; j < _config.EnemiesPerLine; j++)
                 {
                     enemyPosition.x = topLeft.x + j * _config.SpaceBetweenEnemies;

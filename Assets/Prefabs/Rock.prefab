@@ -10,7 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1035866047985227097}
   - component: {fileID: 5745200026799286301}
-  m_Layer: 0
+  - component: {fileID: 656494816969471773}
+  - component: {fileID: 2590668327251478668}
+  - component: {fileID: 7962051198938375185}
+  m_Layer: 11
   m_Name: Asteroid 5_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,6 +83,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &656494816969471773
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360101887942844040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.26, y: 0.22, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2590668327251478668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360101887942844040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &7962051198938375185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360101887942844040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996c6c76acc8140a26fc8cf84d1e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1094828031550666520
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +133,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5481253617357660833}
   - component: {fileID: 4701104229891824939}
-  m_Layer: 0
+  - component: {fileID: 5102288434051951636}
+  - component: {fileID: 2503891853170145796}
+  - component: {fileID: 5738031748458322024}
+  m_Layer: 11
   m_Name: Asteroid 5_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,6 +206,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &5102288434051951636
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094828031550666520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.265, y: 0.24, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2503891853170145796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094828031550666520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &5738031748458322024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094828031550666520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996c6c76acc8140a26fc8cf84d1e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1515975113291696950
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +256,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6825152600603086423}
   - component: {fileID: 6021074524836678173}
-  m_Layer: 0
+  - component: {fileID: 3609466119694632518}
+  - component: {fileID: 4978055121153846729}
+  - component: {fileID: 4129707886570327343}
+  m_Layer: 11
   m_Name: Asteroid 5_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,6 +329,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &3609466119694632518
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515975113291696950}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.26, y: 0.22, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4978055121153846729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515975113291696950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &4129707886570327343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515975113291696950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996c6c76acc8140a26fc8cf84d1e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2411786616163489552
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +379,10 @@ GameObject:
   m_Component:
   - component: {fileID: 799430057940542256}
   - component: {fileID: 1176511591409305026}
-  m_Layer: 0
+  - component: {fileID: 5435143473555256606}
+  - component: {fileID: 8105600296040164461}
+  - component: {fileID: 3522340225512681667}
+  m_Layer: 11
   m_Name: Asteroid 5_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,6 +452,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &5435143473555256606
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2411786616163489552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.24, y: 0.19, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8105600296040164461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2411786616163489552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &3522340225512681667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2411786616163489552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996c6c76acc8140a26fc8cf84d1e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2701267175261853923
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +502,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1687418496568691370}
   - component: {fileID: 7528028758586819433}
-  m_Layer: 0
+  - component: {fileID: 6237269216495482060}
+  - component: {fileID: 1285715924994135485}
+  - component: {fileID: 5376746561457409377}
+  m_Layer: 11
   m_Name: Asteroid 5_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,6 +575,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &6237269216495482060
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2701267175261853923}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.265, y: 0.24, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1285715924994135485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2701267175261853923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &5376746561457409377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2701267175261853923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996c6c76acc8140a26fc8cf84d1e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3348049244601286962
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +625,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2973150052654245045}
   - component: {fileID: 7729898229879337271}
-  m_Layer: 0
+  - component: {fileID: 8082976523732372943}
+  - component: {fileID: 550959052947316834}
+  - component: {fileID: 1319595759864133664}
+  m_Layer: 11
   m_Name: Asteroid 5_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,6 +698,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &8082976523732372943
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3348049244601286962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.265, y: 0.24, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &550959052947316834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3348049244601286962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &1319595759864133664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3348049244601286962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996c6c76acc8140a26fc8cf84d1e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3772453123023873256
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +748,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2587257822707720026}
   - component: {fileID: 5725380331298213873}
-  m_Layer: 0
+  - component: {fileID: 8687377393992918237}
+  - component: {fileID: 7066056053938120280}
+  - component: {fileID: 1954822283379849538}
+  m_Layer: 11
   m_Name: Asteroid 5_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,6 +821,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &8687377393992918237
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3772453123023873256}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.48, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7066056053938120280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3772453123023873256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &1954822283379849538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3772453123023873256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996c6c76acc8140a26fc8cf84d1e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4571104219106496098
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +871,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5722053548130153290}
   - component: {fileID: 7149758261102545818}
-  m_Layer: 0
+  - component: {fileID: 8751321296150159322}
+  - component: {fileID: 1380340433414638156}
+  - component: {fileID: 245373070120539014}
+  m_Layer: 11
   m_Name: Asteroid 5_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -640,6 +944,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &8751321296150159322
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4571104219106496098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.265, y: 0.24, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1380340433414638156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4571104219106496098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &245373070120539014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4571104219106496098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996c6c76acc8140a26fc8cf84d1e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5559492919479692075
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +994,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7178203097975480933}
   - component: {fileID: 7202667764472676557}
-  m_Layer: 0
+  - component: {fileID: 6993796474888406127}
+  - component: {fileID: 799784722622435274}
+  - component: {fileID: 6718426754271628444}
+  m_Layer: 11
   m_Name: Asteroid 5_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,6 +1067,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &6993796474888406127
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559492919479692075}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.23, y: 0.4, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &799784722622435274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559492919479692075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &6718426754271628444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559492919479692075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996c6c76acc8140a26fc8cf84d1e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5629156085741934148
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +1117,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4793940266130016449}
   - component: {fileID: 8432116290851692421}
-  m_Layer: 0
+  - component: {fileID: 8995668057606070688}
+  - component: {fileID: 6834553547323739136}
+  - component: {fileID: 9101199413389600111}
+  m_Layer: 11
   m_Name: Asteroid 5_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -800,6 +1190,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &8995668057606070688
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5629156085741934148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.265, y: 0.24, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6834553547323739136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5629156085741934148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &9101199413389600111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5629156085741934148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996c6c76acc8140a26fc8cf84d1e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5993751851755894800
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +1240,10 @@ GameObject:
   m_Component:
   - component: {fileID: 311374314281678921}
   - component: {fileID: 2436807934435022005}
-  m_Layer: 0
+  - component: {fileID: 548628050278611046}
+  - component: {fileID: 379518864883639204}
+  - component: {fileID: 5060961526581973003}
+  m_Layer: 11
   m_Name: Asteroid 5_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -880,6 +1313,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &548628050278611046
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5993751851755894800}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.24, y: 0.24, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &379518864883639204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5993751851755894800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &5060961526581973003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5993751851755894800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996c6c76acc8140a26fc8cf84d1e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6778057276725748466
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +1363,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4561755911710800533}
   - component: {fileID: 4664496684461203218}
-  m_Layer: 0
+  - component: {fileID: 2041498522232330777}
+  - component: {fileID: 8271521947500265254}
+  - component: {fileID: 2761733705636143072}
+  m_Layer: 11
   m_Name: Asteroid 5_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -960,6 +1436,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &2041498522232330777
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6778057276725748466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.18, y: 0.12, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8271521947500265254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6778057276725748466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &2761733705636143072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6778057276725748466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996c6c76acc8140a26fc8cf84d1e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7863981298238383765
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,7 +1486,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1789470020068941125}
   - component: {fileID: 7817552664664973678}
-  m_Layer: 0
+  - component: {fileID: 8141117431222378819}
+  - component: {fileID: 5440678476415615709}
+  - component: {fileID: 6404045444455860886}
+  m_Layer: 11
   m_Name: Asteroid 5_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1040,6 +1559,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &8141117431222378819
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7863981298238383765}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.265, y: 0.24, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5440678476415615709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7863981298238383765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &6404045444455860886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7863981298238383765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996c6c76acc8140a26fc8cf84d1e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7943467752699180098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +1609,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2709497953950808450}
   - component: {fileID: 1168698663668842207}
-  m_Layer: 0
+  - component: {fileID: 2877241207574333838}
+  - component: {fileID: 5900031224832850785}
+  - component: {fileID: 7221020720825306504}
+  m_Layer: 11
   m_Name: Asteroid 5_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,6 +1682,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &2877241207574333838
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7943467752699180098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.265, y: 0.24, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5900031224832850785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7943467752699180098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &7221020720825306504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7943467752699180098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996c6c76acc8140a26fc8cf84d1e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9014666925000742641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,7 +1732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3245945356882846571}
   - component: {fileID: 8408945694117777949}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}

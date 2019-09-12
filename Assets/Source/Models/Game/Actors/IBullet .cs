@@ -1,13 +1,10 @@
-﻿using UnityEngine;
+﻿using Assets.Source.Controllers;
 
 namespace Assets.Source.Models.Game.Actors
 {
-    public delegate void HitDestructibleDelegate(IBullet bullet, IShooter shooter, IDestructible destructible);
-
-    public interface IBullet : IDestructible
+    public interface IBullet : IDestructible, ICollidable
     {
-        event HitDestructibleDelegate OnHitDestructible;
-        void FireBullet (IShooter shooter, Vector3 position, Vector3 direction);
+        void SetProperties(EBulletDirection direction, float speed = 1f, float offScreenKillZone = 0);
         void UpdatePosition();
     }
 }

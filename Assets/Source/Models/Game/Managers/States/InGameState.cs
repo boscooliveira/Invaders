@@ -1,5 +1,7 @@
 ﻿
 using Assets.Source.Models.Game.Actors;
+using Assets.Source.Models.Game.Controllers;
+using System.Collections.Generic;
 
 namespace Assets.Source.Models.Game.Managers.States
 {
@@ -9,6 +11,12 @@ namespace Assets.Source.Models.Game.Managers.States
         public EGameState NextState { get; private set; }
         private GameData _gameData;
         private int _totalEnemies;
+        private CollisionController _collisionController;
+
+        public InGameState()
+        {
+            _collisionController = new CollisionController();
+        }
 
         public void EnterState(GameData data)
         {
@@ -39,12 +47,12 @@ namespace Assets.Source.Models.Game.Managers.States
             switch (destructible)
             {
                 case IPlayer player:
-                    NextState = EGameState.GameOver;
+                    NextState = EGameState.Menu;
                     break;
                 case IEnemy enemy:
                     if (--_totalEnemies == 0)
                     {
-                        NextState = EGameState.NewStage;
+                        NextState = EGameState.Menu;
                     }
                     else
                     {
@@ -64,13 +72,15 @@ namespace Assets.Source.Models.Game.Managers.States
 
         public void Update(Input.EGameInput input)
         {
-            //TODO: Update Enemies/Player/Bullets
-            //TODO: Check Pause
             _gameData.EnemyController.UpdateEnemiesPositions(_gameData.Enemies);
-            var bullets = _gameData.EnemyController.GetEnemiesBullets();
-            _gameData.BulletController.UpdateBulletPositions(bullets);
+            var enemiesBullets = _gameData.EnemyController.GetEnemiesBullets();
+            _gameData.BulletController.UpdateBulletPositions(enemiesBullets);
+
             _gameData.Player.UpdatePosition(input);
-            _gameData.BulletController.UpdateBulletPositions(_gameData.Player.GetBullets());
+            var playerBullets = _gameData.Player.GetBullets();
+            _gameData.BulletController.UpdateBulletPositions(playerBullets);
+
+            _collisionController.UpdateInGameCollisions(_gameData, enemiesBullets, playerBullets);
         }
     }
 }

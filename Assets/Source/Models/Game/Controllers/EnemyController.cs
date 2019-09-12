@@ -1,7 +1,10 @@
 ﻿using Assets.Source.Models.Configs;
 using Assets.Source.Models.Game.Actors;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+
+using Random = UnityEngine.Random;
 
 namespace Assets.Source.Models.Game.Controllers
 {
@@ -82,15 +85,27 @@ namespace Assets.Source.Models.Game.Controllers
                 }
 
 
-                _firedBullets.Add( keyValuePair.Value.Shoot(_bulletSpawner) );
+                var newBullet = keyValuePair.Value.Shoot(_bulletSpawner);
+                newBullet.ObjectDestroyed += OnBulletDestroyed;
+                _firedBullets.Add( newBullet );
                 break;
+            }
+        }
+
+        private void OnBulletDestroyed(IDestructible destructible)
+        {
+            if(destructible is IBullet bullet)
+            {
+                bullet.ObjectDestroyed -= OnBulletDestroyed;
+                _firedBullets.Remove(bullet);
             }
         }
 
         private void ResetTimeToUpdate()
         {
             int maxEnemies = _enemySpawnConfig.EnemiesPerLine * _enemySpawnConfig.MaxLines;
-            float factor = Mathf.Exp((float)_enemiesLeft.Count/maxEnemies) / (float) System.Math.E;
+            float factor = (Mathf.Exp((float)_enemiesLeft.Count/maxEnemies) / (float) System.Math.E) - (1 / (float)System.Math.E);
+
 
             _timeToNextUpdate = _enemyConfig.MinTickTime + (_enemyConfig.MaxTickTime - _enemyConfig.MinTickTime) * factor;
         }

@@ -1,6 +1,6 @@
 ﻿namespace Assets.Source.Models.Game.Actors
 {
-    public interface IRock : IDestructible
+    public interface IRock : IDestructible, ICollidable
     {
     }
 }

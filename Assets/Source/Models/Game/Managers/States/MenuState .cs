@@ -11,6 +11,7 @@ namespace Assets.Source.Models.Game.Managers.States
         public void EnterState(GameData data)
         {
             NextState = EGameState.Undefined;
+            data.PlayerSpawner.Spawn();
         }
 
         public void LeaveState()

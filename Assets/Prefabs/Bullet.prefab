@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6687513684238290581}
   - component: {fileID: 6419940602847971599}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4577655400931600179}
   - component: {fileID: 7400282137197337136}
-  m_Layer: 0
+  - component: {fileID: 8669203024099538367}
+  - component: {fileID: 8167989394790894166}
+  m_Layer: 10
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,3 +125,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d522f3326fe3d4bb1e18f105c7e30b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &8669203024099538367
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5086940108801911356}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12, y: 0.55, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8167989394790894166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5086940108801911356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f147e340b6e5c034d989d303f664f8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayersToDetect:
+    serializedVersion: 2
+    m_Bits: 3840

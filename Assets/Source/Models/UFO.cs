@@ -2,6 +2,7 @@
 
 namespace Assets.Source.Models
 {
+    [RequireComponent(typeof(HitDetector))]
     public class UFO : MonoBehaviour
     {
         public void Reset(Vector3 topLeft)
