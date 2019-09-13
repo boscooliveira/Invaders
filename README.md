@@ -20,6 +20,5 @@ Tasks:
 
 4) Implement Game Controller
   - Start Game
-  - Gunfire logic
   - End Game 
 

@@ -1,5 +1,7 @@
 ﻿
 using Assets.Source.Models.Game.Managers.Input;
+using Assets.Source.Services.DI;
+using UnityEngine.Assertions;
 
 namespace Assets.Source.Models.Game.Managers.States
 {
@@ -11,7 +13,11 @@ namespace Assets.Source.Models.Game.Managers.States
         public void EnterState(GameData data)
         {
             NextState = EGameState.Undefined;
-            data.PlayerSpawner.Spawn();
+            var playerSpawner = DIContainer.Instance.Resolve<IPlayerSpawner>();
+            Assert.IsNotNull(playerSpawner);
+            playerSpawner.Spawn();
+
+            StateManager.ChangeUIState(EUIState.Menu);
         }
 
         public void LeaveState()

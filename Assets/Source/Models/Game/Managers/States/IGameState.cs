@@ -6,9 +6,8 @@
         Menu,
         StartNewGame,
         InGame,
-        Pause,
-        NewStage,
-        GameOver
+        Win,
+        Lose
     }
 
     public interface IGameState

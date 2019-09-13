@@ -37,7 +37,6 @@ namespace Assets.Source.Models.Game.Controllers
 
                     if (collidable1.IsColliding(collidable2))
                     {
-                        UnityEngine.Debug.Log("Collided");
                         _collisions.Add(new KeyValuePair<int, int>(i,j));
                     }
                 }

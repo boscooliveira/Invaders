@@ -1,7 +1,9 @@
 ﻿
 using Assets.Source.Models.Game.Actors;
 using Assets.Source.Models.Game.Controllers;
+using Assets.Source.Services.DI;
 using System.Collections.Generic;
+using UnityEngine.Assertions;
 
 namespace Assets.Source.Models.Game.Managers.States
 {
@@ -12,6 +14,7 @@ namespace Assets.Source.Models.Game.Managers.States
         private GameData _gameData;
         private int _totalEnemies;
         private CollisionController _collisionController;
+        private bool _pause;
 
         public InGameState()
         {
@@ -39,6 +42,7 @@ namespace Assets.Source.Models.Game.Managers.States
                     destructible.ObjectDestroyed += OnDestroy;
                 }
             }
+            StateManager.ChangeUIState(EUIState.InGame);
         }
 
         public void OnDestroy(IDestructible destructible)
@@ -47,16 +51,12 @@ namespace Assets.Source.Models.Game.Managers.States
             switch (destructible)
             {
                 case IPlayer player:
-                    NextState = EGameState.Menu;
+                    NextState = EGameState.Lose;
                     break;
                 case IEnemy enemy:
                     if (--_totalEnemies == 0)
                     {
-                        NextState = EGameState.Menu;
-                    }
-                    else
-                    {
-                        //TODO: update enemies speed
+                        NextState = EGameState.Win;
                     }
                     break;
             }
@@ -72,13 +72,29 @@ namespace Assets.Source.Models.Game.Managers.States
 
         public void Update(Input.EGameInput input)
         {
-            _gameData.EnemyController.UpdateEnemiesPositions(_gameData.Enemies);
-            var enemiesBullets = _gameData.EnemyController.GetEnemiesBullets();
-            _gameData.BulletController.UpdateBulletPositions(enemiesBullets);
+            if(input == Input.EGameInput.Enter)
+            {
+                _pause = !_pause;
+                StateManager.ChangeUIState(_pause ? EUIState.Pause : EUIState.InGame);
+            }
+
+            if(_pause)
+            {
+                return;
+            }
+
+            var enemyController = DIContainer.Instance.Resolve<IEnemyController>();
+            var bulletController = DIContainer.Instance.Resolve<IBulletController>();
+            Assert.IsNotNull(enemyController);
+            Assert.IsNotNull(bulletController);
+
+            enemyController.UpdateEnemiesPositions(_gameData.Enemies);
+            var enemiesBullets = enemyController.GetEnemiesBullets();
+            bulletController.UpdateBulletPositions(enemiesBullets);
 
             _gameData.Player.UpdatePosition(input);
             var playerBullets = _gameData.Player.GetBullets();
-            _gameData.BulletController.UpdateBulletPositions(playerBullets);
+            bulletController.UpdateBulletPositions(playerBullets);
 
             _collisionController.UpdateInGameCollisions(_gameData, enemiesBullets, playerBullets);
         }

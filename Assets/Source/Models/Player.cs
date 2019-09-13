@@ -34,7 +34,6 @@ namespace Assets.Source.Models
 
         public IBullet Shoot(IBulletSpawner bulletSpawner)
         {
-            Debug.Log($"Player is shooting");
             var bullet = bulletSpawner.SpawnBullet(this, EBulletDirection.Up);
             bullet.ObjectDestroyed += OnBulletDestroyed;
             Shot?.Invoke(this);
@@ -57,7 +56,7 @@ namespace Assets.Source.Models
 
         public void UpdatePosition(EGameInput input)
         {
-            if (input.HasFlag(EGameInput.Fire) || input.HasFlag(EGameInput.Enter))
+            if (input.HasFlag(EGameInput.Fire))
             {
                 _bullets.Add( Shoot(_bulletSpawner) );
             }

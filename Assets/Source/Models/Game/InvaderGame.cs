@@ -1,32 +1,20 @@
-﻿using Assets.Source.Models.Game.Controllers;
-using Assets.Source.Models.Game.Managers.Input;
+﻿using Assets.Source.Models.Game.Managers.Input;
 using Assets.Source.Models.Game.Managers.States;
+using Assets.Source.Services.DI;
 
 namespace Assets.Source.Models.Game
 {
     public class InvaderGame
     {
         private readonly GameData _gameData;
-        private readonly IStateManager _stateManager;
+        private readonly StateManager _stateManager;
         private readonly IGameInputManager _inputManager;
 
-        public InvaderGame(IEnemiesSpawner enemiesSpawner, IPlayerSpawner playerSpawner, IRockSpawner rockSpawner,
-            IBulletSpawner bulletSpawner, IStateManager state, IGameInputManager input, IEnemyController enemyController, 
-            IBulletController bulletController)
+        public InvaderGame()
         {
-            _gameData = new GameData
-            {
-                EnemiesSpawner = enemiesSpawner,
-                PlayerSpawner = playerSpawner,
-                RockSpawner = rockSpawner,
-                BulletSpawner = bulletSpawner,
-                EnemyController = enemyController,
-                BulletController = bulletController
-            };
-
-            _stateManager = state;
-            _inputManager = input;
-
+            _gameData = new GameData();
+            _stateManager = new StateManager();
+            _inputManager = DIContainer.Instance.Resolve<IGameInputManager>();
             _stateManager.Initialize(_gameData);
         }
 

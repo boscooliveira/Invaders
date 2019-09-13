@@ -4,6 +4,7 @@ using Assets.Source.Models.Game;
 using Assets.Source.Models.Game.Controllers;
 using Assets.Source.Models.Game.Managers.Input;
 using Assets.Source.Models.Game.Managers.States;
+using Assets.Source.Services.DI;
 using UnityEngine;
 
 namespace Assets.Source.Controllers
@@ -46,11 +47,17 @@ namespace Assets.Source.Controllers
             Player.SetConfigs(bottomLeftWorld, BulletSpawner, gameWidth);
             Rocks.SetConfigs(GameConfig.RockSpawnConfig, bottomLeftWorld, gameWidth);
 
-            var controller = new EnemyController(GameConfig.EnemyBehaviourConfig, GameConfig.EnemySpawnConfig, BulletSpawner,
-                topLeftWorld.x, bottomRightWorld.x);
-            
-            _game = new InvaderGame(Enemies, Player, Rocks, BulletSpawner, new StateManager(), new GameInputManager(), 
-                controller, new BulletController());
+            var controller = new EnemyController(GameConfig.EnemyBehaviourConfig, GameConfig.EnemySpawnConfig,
+                BulletSpawner, topLeftWorld.x, bottomRightWorld.x);
+
+            DIContainer.Instance.Bind<IEnemiesSpawner>(Enemies);
+            DIContainer.Instance.Bind<IPlayerSpawner>(Player);
+            DIContainer.Instance.Bind<IRockSpawner>(Rocks);
+            DIContainer.Instance.Bind<IBulletSpawner>(BulletSpawner);
+            DIContainer.Instance.Bind<IEnemyController>(controller);
+            DIContainer.Instance.Bind<IBulletController>(new BulletController());
+
+            _game = new InvaderGame();
         }
 
         private void Update()

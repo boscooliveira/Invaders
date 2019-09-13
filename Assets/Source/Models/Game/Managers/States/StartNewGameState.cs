@@ -1,6 +1,9 @@
 ﻿
 using Assets.Source.Models.Game.Actors;
+using Assets.Source.Models.Game.Controllers;
+using Assets.Source.Services.DI;
 using System.Collections.Generic;
+using UnityEngine.Assertions;
 
 namespace Assets.Source.Models.Game.Managers.States
 {
@@ -32,16 +35,24 @@ namespace Assets.Source.Models.Game.Managers.States
             
             _gameData.Destructibles.Clear();
 
-            SpawnElement(_gameData.EnemiesSpawner, ref _gameData.Enemies);
+            var enemySpawner = DIContainer.Instance.Resolve<IEnemiesSpawner>();
+            var rockSpawner = DIContainer.Instance.Resolve<IRockSpawner>();
+            var playerSpawner = DIContainer.Instance.Resolve<IPlayerSpawner>();
+
+            Assert.IsNotNull(enemySpawner);
+            Assert.IsNotNull(rockSpawner);
+            Assert.IsNotNull(playerSpawner);
+
+            SpawnElement(enemySpawner, ref _gameData.Enemies);
             _gameData.Destructibles.AddRange(_gameData.Enemies);
-            SpawnElement(_gameData.RockSpawner, ref _gameData.Rocks);
+            SpawnElement(rockSpawner, ref _gameData.Rocks);
             _gameData.Destructibles.AddRange(_gameData.Rocks);
 
             if (_gameData.Player != null)
             {
                 _gameData.Player.Destroy();
             }
-            _gameData.Player = _gameData.PlayerSpawner.Spawn();
+            _gameData.Player = playerSpawner.Spawn();
 
             _gameData.Destructibles.Add(_gameData.Player);
         }
@@ -49,8 +60,9 @@ namespace Assets.Source.Models.Game.Managers.States
         public void EnterState(GameData data)
         {
             _gameData = data;
-            _gameData.EnemyController.Reset();
+            DIContainer.Instance.Resolve<IEnemyController>().Reset();
             SpawnGameElements();
+            StateManager.ChangeUIState(EUIState.InGame);
         }
 
         public void LeaveState()

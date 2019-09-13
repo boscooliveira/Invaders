@@ -33,7 +33,6 @@ namespace Assets.Source.Controllers
 
         public IBullet SpawnBullet(IShooter shooter, EBulletDirection direction)
         {
-            Debug.Log("Shooter fired!!!! Spawning a bullet");
             Bullet newBullet = CreateBullet();
             newBullet.transform.position = shooter.GunPosition;
             newBullet.SetProperties(direction, _bulletConfig.MoveSpeed, _bulletConfig.OffScreenKillZone);
